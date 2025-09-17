@@ -1,12 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TJDesign Laser</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TJDesign Laser — Personalizados</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f6f7f9;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#6b7280;
+      --brand:#0ea5e9; /* azul bonito */
+      --brand-dark:#0284c7;
+      --ring:rgba(14,165,233,.25);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji','Segoe UI Emoji', 'Segoe UI Symbol';
+      background: radial-gradient(1200px 600px at 80% -10%, #e6f6ff 0%, transparent 55%) , var(--bg);
+      color:var(--text);
+      display:flex; align-items:center; justify-content:center; padding:24px;
+    }
+    .wrap{max-width:1040px; width:100%}
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      margin-bottom:18px; gap:12px;
+    }
+    .brand{display:flex; align-items:center; gap:12px}
+    .brand img{height:48px; width:48px; object-fit:contain; border-radius:50%; box-shadow:0 0 0 2px #00000010}
+    .brand h1{font-size:1.25rem; margin:0}
+    .card{
+      background:var(--card); border-radius:18px; padding:28px;
+      box-shadow:0 12px 40px rgba(2,8,23,.08), 0 0 0 1px rgba(2,8,23,.04);
+      display:grid; grid-template-columns: 1.1fr 1fr; gap:28px;
+    }
+    .hero{
+      background:#fafafa; border-radius:16px; padding:24px; position:relative; overflow:hidden;
+      min-height:260px; display:flex; align-items:center; justify-content:center;
+    }
+    .led{
+      width:min(420px, 90%); aspect-ratio:1.2/1;
+      background:#111; border-radius:16px; position:relative; box-shadow:inset 0 0 0 2px #2b2b2b;
+    }
+    .led::before{
+      content:""; position:absolute; inset:14% 10% 22% 10%;
+      border:2px solid #fff; border-radius:16px;
+      filter:drop-shadow(0 0 6px #fff) drop-shadow(0 0 18px #fff);
+      opacity:.9;
+    }
+    .led .base{
+      position:absolute; left:50%; transform:translateX(-50%); bottom:14px;
+      width:60%; height:36px; background:#f1f5f9; border-radius:18px;
+      box-shadow: inset 0 0 0 1px #d0d7e2;
+    }
+    .content h2{font-size:2.2rem; margin:0 0 10px; line-height:1.15}
+    .content p{margin:0 0 18px; color:var(--muted)}
+    .cta{display:flex; gap:12px; flex-wrap:wrap}
+    .btn{
+      appearance:none; border:none; cursor:pointer;
+      background:var(--brand); color:white; padding:12px 18px; border-radius:12px; font-weight:700;
+      box-shadow:0 0 0 0 var(--ring); transition:transform .08s ease, box-shadow .2s ease, background .2s ease;
+      text-decoration:none; display:inline-flex; align-items:center; gap:10px;
+    }
+    .btn:active{transform:translateY(1px)}
+    .btn:hover{background:var(--brand-dark); box-shadow:0 0 0 8px var(--ring)}
+    .btn.outline{background:#ffffff; color:var(--text); border:1px solid #e5e7eb}
+    .grid{
+      margin-top:22px; display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;
+    }
+    .tile{
+      background:#f8fafc; border-radius:14px; padding:16px; text-align:center; border:1px dashed #e5e7eb;
+      color:var(--muted); font-weight:600;
+    }
+    footer{margin-top:14px; text-align:center; color:var(--muted); font-size:.9rem}
+    @media (max-width:900px){
+      .card{grid-template-columns:1fr}
+      .hero{order:2}
+      .content{order:1}
+    }
+  </style>
 </head>
 <body>
-    <h1>🚀 Site TJDesign Laser em construção!</h1>
-    <p>Bem-vindo ao meu novo site. Em breve novidades!</p>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <!-- Troque o src abaixo pelo caminho da sua logo: /logo-tjdesignlaser.png -->
+        <img src="https://i.ibb.co/S5h6CRk/tjdesign-logo.png" alt="TJDesign Laser">
+        <h1>TJDesign Laser</h1>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="hero">
+        <!-- Mock de luminária para aparição bonita -->
+        <div class="led">
+          <div class="base"></div>
+        </div>
+      </div>
+      <div class="content">
+        <h2>Lojas & Personalizados<br>em Acrílico, MDF e Sublimação</h2>
+        <p>Estamos preparando a melhor experiência para você comprar <strong>luminárias, canecas, azulejos</strong> e muito mais. Tudo feito com amor e corte à laser CO₂.</p>
+        <div class="cta">
+          <a class="btn" href="https://wa.me/351968148154?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20as%20lumin%C3%A1rias%20e%20personalizados.">Falar no WhatsApp</a>
+          <a class="btn outline" href="mailto:contato@tjdesignlaser.pt">contato@tjdesignlaser.pt</a>
+        </div>
+        <div class="grid">
+          <div class="tile">Luminárias em Acrílico</div>
+          <div class="tile">Canecas Personalizadas</div>
+          <div class="tile">Azulejos & MDF</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>© <span id="y"></span> TJDesign Laser — Ovar, Portugal</footer>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
